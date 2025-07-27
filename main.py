@@ -20,18 +20,14 @@ def cuentaregresiva(numero):
         print(numero)
         cuentaregresiva(numero - 1)
 
-def contadordigitos(dato):
-    dato = (dato)
-    if dato < 10:
+def contadordigitos(n):
+    if n < 10:
         return 1
     else:
-        return 1 + contadordigitos(dato // 10)
+        return 1+ contadordigitos(n/10)
 
-
-
-dato = int(input("Ingresa un numero: "))
-print(contadordigitos(dato))
-
+n= int(input("Ingresa un numero: "))
+print(f"EL numero ingresado tiene la cantidad de digitos: {contadordigitos(n)}")
 
 
 
