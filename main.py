@@ -1,3 +1,5 @@
+from queue import PriorityQueue
+
 
 def invertirtexto(texto):
     if texto == "":
@@ -20,15 +22,39 @@ def cuentaregresiva(numero):
         print(numero)
         cuentaregresiva(numero - 1)
 
-def contadordigitos(n):
-    if n < 10:
+def contadordigitos(n1):
+    if n1 < 10:
         return 1
     else:
-        return 1+ contadordigitos(n/10)
-
-n= int(input("Ingresa un numero: "))
-print(f"EL numero ingresado tiene la cantidad de digitos: {contadordigitos(n)}")
+        return 1+ contadordigitos(n1/10)
 
 
 
+print("menu")
+seleccion = ""
+while seleccion != "0":
+    print("1. Invertir")
+    print("2. Sumar")
+    print("3. Cuenta Regresiva")
+    print("4. Contador")
+    seleccion=int(input())
+
+    if seleccion == "1":
+        texto=input("Ingrese el texto: ")
+        print("Invertir")
+
+    elif seleccion == "2":
+        n = int(input("Ingrese el numero: "))
+        print("Sumar")
+
+    elif seleccion == "3":
+        numero = int(input("Ingrese el numero: "))
+        print("Cuenta Regresiva")
+
+    elif seleccion == "4":
+        n1=input(input("Ingrese el numero: "))
+        print(contadordigitos(n1))
+
+    elif seleccion == "0":
+        print("Programa terminado")
 
